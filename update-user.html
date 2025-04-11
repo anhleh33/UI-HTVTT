@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Update</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="logo-section">
+        <img src="img/logo.png" alt="" class="logo-img">
+        <button class="return" onclick="window.location.href='index-after-signin.html'">Return</button>
+    </div>
+
+    <div class="center-wrapper">
+        <div class="signin-box">
+
+            <h1 class="form-title">Update</h1>
+      
+            <form id="updateForm">
+              <div class="row">
+                <div class="input-group">
+                  <label>First Name</label>
+                  <input type="text" required />
+                </div>
+                <div class="input-group">
+                  <label>Last Name</label>
+                  <input type="text" required />
+                </div>
+              </div>
+      
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" required />
+              </div>
+      
+              <div class="input-group">
+                <label>Phone</label>
+                <input type="tel" required />
+              </div>
+      
+              <div class="row">
+                <div class="input-group">
+                  <label>Height</label>
+                  <input type="text" placeholder="cm"/>
+                </div>
+                <div class="input-group">
+                  <label>Weight</label>
+                  <input type="text" placeholder="kg"/>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="input-group">
+                  <label>Birthdate</label>
+                  <input type="date" id="birthdate" />
+                </div>
+                <div class="input-group">
+                  <label>Age</label>
+                  <input type="number" id="age" readonly />
+                </div>
+              </div>
+              
+                <div class="input-group">
+                    <label>Religion</label>
+                    <select>
+                      <option value="" disabled selected>Select your religion</option>
+                      <option value="buddhism">Buddhism</option>
+                      <option value="christianity">Christianity</option>
+                      <option value="islam">Islam</option>
+                      <option value="hinduism">Hinduism</option>
+                      <option value="none">Prefer not to say</option>
+                      <option value="other">Other</option>
+                    </select>
+                </div>
+      
+              <div class="btn-row">
+                <button type="submit" class="reset-btn">Update</button>
+                <button type="button" class="reset-btn">Change password</button>
+              </div>
+      
+              <p class="success-message" id="successMsg">Updated!</p>
+            </form>
+          </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+      <script src="script.js">
+        const form = document.getElementById('updateForm');
+        const successMsg = document.getElementById('successMsg');
+      
+        const birthdateInput = document.getElementById('birthdate');
+        const ageInput = document.getElementById('age');
+      
+        function calculateAgeFromBirthdate(birthdateString) {
+          const birthdate = new Date(birthdateString);
+          const today = new Date();
+          let age = today.getFullYear() - birthdate.getFullYear();
+          const m = today.getMonth() - birthdate.getMonth();
+      
+          if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+            age--;
+          }
+      
+          return age;
+        }
+      
+        birthdateInput.addEventListener('change', () => {
+          const age = calculateAgeFromBirthdate(birthdateInput.value);
+          ageInput.value = age;
+        });
+      
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          successMsg.style.display = 'block';
+          setTimeout(() => successMsg.style.display = 'none', 3000);
+        });
+      </script>
+      </body>
+</html>

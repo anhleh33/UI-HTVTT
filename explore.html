@@ -1,0 +1,173 @@
+<!-- DA TICH HOP VOI TRANG HOME -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="img/logo.png" alt="NutriBite" class="logo-img"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">BMI calculator</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Phần profile button -->
+    <button class="profile-btn" id="profileBtn">
+      <img src="img/avatar.png" alt="User" class="profile-img">
+      <span>Anh Hoang</span>
+    </button>
+  </header>
+    
+<!-- Phần modal profile -->
+<div class="modal" id="profileModal">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    
+    <div class="profile-header">
+      <input type="file" id="avatarUpload" class="avatar-upload" accept="image/*">
+      <label for="avatarUpload">
+        <img src="img/avatar.png" alt="User" id="profileAvatar" class="profile-avatar">
+      </label>
+      <div id="uploadMessage" class="upload-message">Avatar updated successfully!</div>
+      <h2>User Profile</h2>
+    </div>
+    
+    <div class="profile-section">
+      <h3>About</h3>
+      <div class="profile-info">
+        <div class="info-item">
+          <div class="info-label">Name:</div>
+          <div>Anh Hoang</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Age:</div>
+          <div>18</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Height:</div>
+          <div>180cm</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Email:</div>
+          <div>user1sa@gmail.com</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Phone:</div>
+          <div>09011132133</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Religion:</div>
+          <div>Buddhism</div>
+        </div>
+      </div>
+      
+        <button class="btn btn-outline">Update</button>
+    </div>
+    
+    <div class="profile-section">
+      <h3>Health Info</h3>
+      <div class="profile-info">
+        <div class="info-item">
+          <div class="info-label">BMI:</div>
+          <div>18.5</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Weight:</div>
+          <div>60kg</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="profile-section">
+      <h3>My Favorite ist</h3>
+      <div class="food-item">
+        <img src="img/ChickenPastaPrimavera.png" alt="Chicken Pasta">
+        <div class="food-info">
+          <div class="food-name">Chicken Pasta Primavera</div>
+          <div class="food-time">50 mins</div>
+        </div>
+      </div>
+      <div class="food-item">
+        <img src="img/Grilled Salmon Bruschetta with Avocado.png" alt="Grilled Salmon">
+        <div class="food-info">
+          <div class="food-name">Grilled Salmon Bruschetta with Avocado</div>
+          <div class="food-time">50 mins</div>
+        </div>
+      </div>
+    </div>
+      <button class="btn btn-outline" style="width: 100%; margin-bottom: 15px;">Log out</button>
+  </div>
+</div>
+
+    <div class="explore-container">
+        <h1 class="explore-title">EXPLORE</h1>
+        <p class="subtitle" style="text-align: center; margin-top: 1rem;">Discover New Recipes & Trends</p>
+        
+        <div class="search-area">
+          <input type="text" class="search-box" placeholder="Search...">
+          <img src="img/search.png" alt="" class="search-icon">
+      </div>
+        
+        <h2 class="section-title">Categories</h2>
+        <div class="categories">
+            <div class="category-card">
+                <h3>Seasonal Recipes</h3>
+            </div>
+            <div class="category-card">
+                <h3>Keto Friendly</h3>
+            </div>
+            <div class="category-card">
+                <h3>Vegan Delights</h3>
+            </div>
+            <div class="category-card">
+                <h3>High-Protein Dishes</h3>
+            </div>
+            <div class="category-card">
+                <h3>Quick Meals (&lt;30 mins)</h3>
+            </div>
+            <div class="category-card">
+                <h3>Global Cuisine</h3>
+            </div>
+        </div>
+        
+        <div class="trending">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="trending-recipes">
+                <div class="recipe-card">
+                    <div class="recipe-img" style="background-image: url('https://th.bing.com/th/id/OIP.WuZ1Kh6hZ62D6KxpcuGReQHaLH?pid=ImgDet&w=184&h=276&c=7&dpr=1.3');"></div>
+                    <p>Bowl Healthy Morning (4.8<span>★</span>)</p>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-img" style="background-image: url('https://bing.com/th?id=OSK.227782ed7c28ee0d819c7db6d44ca851');"></div>
+                    <p>Spicy Lentil Soup (4.6<span>★</span>)</p>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-img" style="background-image: url('https://bing.com/th?id=OSK.f442015bc9a6fe004e53bd8e8652d4eb');"></div>
+                    <p>Avocado Toast 3 Ways (4.9<span>★</span>)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nutrition-tips">
+            <h2 class="section-title">Nutrition Tips</h2>
+            <ul>
+                <li>How to Balance Macros</li>
+                <li>Superfoods for Immunity</li>
+                <li>Meal Prep for Beginners</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+</body>
+</html>

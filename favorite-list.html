@@ -1,0 +1,121 @@
+<!-- DA TICH HOP VOI TRANG HOME -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Favorite List</title>
+    <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="profileSection"></div>
+    
+      <!-- Phần modal profile -->
+      <div class="modal" id="profileModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+          <button class="close-btn" id="closeBtn">&times;</button>
+          
+          <div class="profile-header">
+            <input type="file" id="avatarUpload" class="avatar-upload" accept="image/*">
+            <label for="avatarUpload">
+              <img src="img/avatar.png" alt="User" id="profileAvatar" class="profile-avatar">
+            </label>
+            <div id="uploadMessage" class="upload-message">Avatar updated successfully!</div>
+            <h2>User Profile</h2>
+          </div>
+          
+          <div class="profile-section">
+            <h3>About</h3>
+            <div class="profile-info">
+              <div class="info-item">
+                <div class="info-label">Name:</div>
+                <div>Anh Hoang</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Age:</div>
+                <div>18</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Height:</div>
+                <div>180cm</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Email:</div>
+                <div>user1sa@gmail.com</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Phone:</div>
+                <div>09011132133</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Religion:</div>
+                <div>Buddhism</div>
+              </div>
+            </div>
+            
+              <button class="btn btn-outline">Update</button>
+          </div>
+          
+          <div class="profile-section">
+            <h3>Health Info</h3>
+            <div class="profile-info">
+              <div class="info-item">
+                <div class="info-label">BMI:</div>
+                <div>18.5</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Weight:</div>
+                <div>60kg</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="profile-section">
+            <h3>My Favorite ist</h3>
+            <div class="food-item">
+              <img src="img/ChickenPastaPrimavera.png" alt="Chicken Pasta">
+              <div class="food-info">
+                <div class="food-name">Chicken Pasta Primavera</div>
+                <div class="food-time">50 mins</div>
+              </div>
+            </div>
+            <div class="food-item">
+              <img src="img/Grilled Salmon Bruschetta with Avocado.png" alt="Grilled Salmon">
+              <div class="food-info">
+                <div class="food-name">Grilled Salmon Bruschetta with Avocado</div>
+                <div class="food-time">50 mins</div>
+              </div>
+            </div>
+          </div>
+            <button class="btn btn-outline" style="width: 100%; margin-bottom: 15px;">Log out</button>
+        </div>
+      </div>
+    
+      <div class="favorite-section">
+        <h1>My Favorite List</h1>
+      
+        <div class="favorite-item">
+          <img src="img/ChickenPastaPrimavera.png" alt="Chicken Pasta">
+          <div class="food-info">
+            <div class="food-name food-name-favorite">Chicken Pasta Primavera</div>
+            <div class="food-time-favorite">50 mins</div>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+      
+        <div class="favorite-item">
+          <img src="img/Grilled Salmon Bruschetta with Avocado.png" alt="Grilled Salmon">
+          <div class="food-info">
+            <div class="food-name food-name-favorite">Grilled Salmon Bruschetta with Avocado</div>
+            <div class="food-time-favorite">50 mins</div>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+      </div>
+
+      <footer id="footer"></footer>
+      <script src="script.js"></script>
+</body>
+</html>
